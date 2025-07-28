@@ -1,100 +1,43 @@
-Overview
-This Power BI dashboard analyzes influencer marketing campaigns for HealthKart brands (e.g., MuscleBlaze, HKVitals, Gritzo). The goal is to measure campaign performance, track payouts, and evaluate ROI and ROAS.
+# 📊 HealthKart Influencer ROI Dashboard
 
-Simulated Datasets
-Influencers
-Fields: ID, Name, Gender, Category, Followers, Platform
-Posts
-Fields: Influencer_ID, Platform, Date, Reach, Likes, Comments, Caption, URL
-Tracking Data
-Fields: Source, Campaign, Influencer_ID, User_ID, Product, Date, Orders, Revenue
-Payouts
-Fields: Influencer_ID, Basis (Post/Order), Rate, Orders, Total_Payout
+This Power BI dashboard analyzes influencer marketing campaigns run by HealthKart for brands like MuscleBlaze, HKVitals, and Gritzo. It measures campaign performance, return on ad spend (ROAS), ROI, and helps identify the most effective influencers and personas.
 
-Features Implemented:-
+## 🔍 Features
+- Performance tracking of influencers and posts
+- ROAS, ROI, Revenue per Post, Revenue per Follower metrics
+- Payout model analysis (Post vs Order based)
+- Filtering by platform, product, brand, gender, category
+- Top/Bottom influencer visuals
+- Persona insights by category/gender
+- Export functionality (PDF/CSV)
 
-✅ Performance KPIs
+## 📂 Data Sources (Simulated)
+- `influencers`: ID, Name, Category, Gender, Followers, Platform
+- `posts`: Influencer_ID, Platform, Date, Reach, Likes, Comments
+- `tracking_data`: Campaign, Product, Orders, Revenue
+- `payouts`: Basis, Rate, Orders, Total_Payout (calculated)
 
-✅ Top/Bottom Influencers by ROAS/ROI
+## 📐 Key Measures (DAX)
+- `Total Revenue = SUM(tracking_data[Revenue])`
+- `Total Ad Spend = SUM(payouts[Total_Payout])`
+- `ROAS = DIVIDE([Total Revenue], [Total Ad Spend])`
+- `ROI = DIVIDE([Total Revenue] - [Total Ad Spend], [Total Ad Spend])`
+- `Revenue per Post`, `Revenue per Follower`, `Cost per Order` included
 
-✅ Product-wise revenue breakdown
+## 🛠 Tools Used
+- Power BI Desktop
+- DAX
+- Simulated Excel datasets
 
-✅ Best persona detection (based on gender & category)
+## 📝 Documentation & Summary
+- Full documentation included (metrics, modeling, assumptions)
+- Insights Summary PDF covers key findings
 
-✅ Payout tracking
+## ✅ Outcomes
+- Identified top-performing influencers by ROAS
+- Evaluated cost-efficiency with deeper metrics
+- Defined best personas for future targeting
 
-✅ Filters: Brand, Product, Influencer Category, Platform
+---
 
-✅ Export-ready visuals
-
-Key Measures (DAX)
-dax
-Copy
-Edit
-ROAS = DIVIDE([Revenue], [Ad Spend])
-ROI = DIVIDE([Revenue] - [Ad Spend], [Ad Spend])
-Incremental ROAS = [ROAS] - [Baseline ROAS] // if defined
-
-📌 Assumptions
-Simulated data reflects realistic influencer metrics.
-
-Ad Spend is either derived per post or per influencer.
-
-Revenue is linked to tracking_data.
-
-No organic traffic is considered in incremental analysis.
-
-🚀 Tools Used
-Power BI
-
-DAX
-
-Simulated CSV tables (merged via relationships)
-
-🧾 Insights Summary (PDF Highlights)
-This would be a 1-pager summary PDF. Here's the content to include:
-
-Influencer Campaign Insights – HealthKart
-📈 Campaign Performance
-Total Revenue: ₹ 1000000
-
-Total Ad Spend: ₹ 745000
-
-Overall ROAS: 1.85 (approx)
-
-ROI: 180%
-
-🌟 Top 5 Influencers (By ROAS)
-Rahul_Fit (6.2X)
-
-Priya_HealthYT (5.9X)
-
-Fitness_King (5.2X)
-
-
-⚠️ Bottom 5 Influencers (By ROI)
-These influencers generated low returns despite high payout:
-
-@FashionGurlz: ROI = -35%
-
-@TechTipsYT: ROI = 0.8X
-
-🧬 Best Performing Personas
-Category: Fitness Professionals (Avg ROAS: 4.5X)
-
-Gender: Male Influencers (Avg Revenue per post: ₹25,000)
-
-📦 Product Revenue Treemap
-MuscleBlaze Whey Gold: ₹4.2L
-
-HKVitals Omega: ₹3.1L
-
-Gritzo Supermilk: ₹2.7L
-
-💸 Payout Model Insights
-80% influencers paid per post
-
-Order-based payouts had higher ROI overall
-
-Top 10 influencers accounted for 65% of total revenue
-
+Would you like me to export the documentation and README into downloadable `.pdf` or `.md` files?
