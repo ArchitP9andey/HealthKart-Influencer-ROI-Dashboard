@@ -11,13 +11,20 @@ Fields: Source, Campaign, Influencer_ID, User_ID, Product, Date, Orders, Revenue
 Payouts
 Fields: Influencer_ID, Basis (Post/Order), Rate, Orders, Total_Payout
 
-Features Implemented
+Features Implemented:-
+
 ✅ Performance KPIs
+
 ✅ Top/Bottom Influencers by ROAS/ROI
+
 ✅ Product-wise revenue breakdown
+
 ✅ Best persona detection (based on gender & category)
+
 ✅ Payout tracking
+
 ✅ Filters: Brand, Product, Influencer Category, Platform
+
 ✅ Export-ready visuals
 
 Key Measures (DAX)
