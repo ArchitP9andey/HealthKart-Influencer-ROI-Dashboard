@@ -1,24 +1,17 @@
-👋 Overview
+Overview
 This Power BI dashboard analyzes influencer marketing campaigns for HealthKart brands (e.g., MuscleBlaze, HKVitals, Gritzo). The goal is to measure campaign performance, track payouts, and evaluate ROI and ROAS.
 
-📁 Simulated Datasets
+Simulated Datasets
 Influencers
-
 Fields: ID, Name, Gender, Category, Followers, Platform
-
 Posts
-
 Fields: Influencer_ID, Platform, Date, Reach, Likes, Comments, Caption, URL
-
 Tracking Data
-
 Fields: Source, Campaign, Influencer_ID, User_ID, Product, Date, Orders, Revenue
-
 Payouts
-
 Fields: Influencer_ID, Basis (Post/Order), Rate, Orders, Total_Payout
 
-📊 Features Implemented
+Features Implemented
 ✅ Performance KPIs
 ✅ Top/Bottom Influencers by ROAS/ROI
 ✅ Product-wise revenue breakdown
@@ -27,13 +20,14 @@ Fields: Influencer_ID, Basis (Post/Order), Rate, Orders, Total_Payout
 ✅ Filters: Brand, Product, Influencer Category, Platform
 ✅ Export-ready visuals
 
-🧠 Key Measures (DAX)
+Key Measures (DAX)
 dax
 Copy
 Edit
 ROAS = DIVIDE([Revenue], [Ad Spend])
 ROI = DIVIDE([Revenue] - [Ad Spend], [Ad Spend])
 Incremental ROAS = [ROAS] - [Baseline ROAS] // if defined
+
 📌 Assumptions
 Simulated data reflects realistic influencer metrics.
 
